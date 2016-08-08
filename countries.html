@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="countriesApp">
+<head>
+	<title>Countries</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script src="countries.js" type="text/javascript"></script>
+	<style type="text/css" media="screen">
+		td{
+			text-align: center;
+			font-weight: bold;
+		}
+		thead{
+			border-bottom: solid 2px black;
+		}
+	</style>
+</head>
+<body ng-controller="countriesController">
+	<table>
+	
+		<thead>
+			<tr>
+				<th>Flag</th>
+				<th>Country Name</th>
+				<th></th>
+				<th>
+					<img src="https://ssl.gstatic.com/onebox/sports/olympics/2016/medals2/ic_medal-small-gold_2x.png"/>
+				</th>
+				<th>
+					<img src="https://ssl.gstatic.com/onebox/sports/olympics/2016/medals2/ic_medal-small-silver_2x.png"/>
+				</th>
+				<th>
+					<img src="https://ssl.gstatic.com/onebox/sports/olympics/2016/medals2/ic_medal-small-bronze_2x.png"/>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="country in countries">
+				<td><img ng-src="{{country.img}}"/></td>
+				<td>{{country.name}}</td>
+				<td></td>
+				<td>{{country.goldMedals}}</td>
+				<td>{{country.silverMedals}}</td>
+				<td>{{country.bronzeMedals}}</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

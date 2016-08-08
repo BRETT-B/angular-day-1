@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="userNameApp">
+<head>
+	<title>User Name App</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script type="text/javascript">
+	var myApp = angular.module('userNameApp', []);
+	
+
+	</script>
+
+</head>
+<body>
+	Enter your First and Last Names in the fields below.
+
+	<br />
+	First Name: <input type="text" ng-model="fname" ng-change="change = change + 1"/>
+	Last Name: <input type="text" ng-model="lname" ng-change="change = change + 1"/>
+	
+	<br />Hello, {{fname}} {{lname}}
+
+	<br />Your first and last name contains {{change}} characters.
+
+
+</body>
+</html>
